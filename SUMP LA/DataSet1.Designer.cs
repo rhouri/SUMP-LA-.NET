@@ -10,9 +10,8 @@
 
 #pragma warning disable 1591
 
-namespace LA2 {
-    
-    
+namespace LA2
+    {
     /// <summary>
     ///Represents a strongly typed in-memory cache of data.
     ///</summary>
@@ -23,54 +22,63 @@ namespace LA2 {
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
     [global::System.Xml.Serialization.XmlRootAttribute("dsChannels")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsChannels : global::System.Data.DataSet {
-        
+    public partial class dsChannels :global::System.Data.DataSet
+        {
+
         private tblChannelsDataTable tabletblChannels;
-        
+
         private ProtocolDataTable tableProtocol;
-        
+
         private SampleRatesDataTable tableSampleRates;
-        
+
         private CurrentSettingsDataTable tableCurrentSettings;
-        
+
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public dsChannels() {
+        public dsChannels ()
+            {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
             base.Tables.CollectionChanged += schemaChangedHandler;
             base.Relations.CollectionChanged += schemaChangedHandler;
             this.EndInit();
-        }
-        
+            }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected dsChannels(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                base(info, context, false) {
-            if ((this.IsBinarySerialized(info, context) == true)) {
+        protected dsChannels ( global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context ) :
+                base(info, context, false)
+            {
+            if ((this.IsBinarySerialized(info, context) == true))
+                {
                 this.InitVars(false);
                 global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler1 = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
                 this.Tables.CollectionChanged += schemaChangedHandler1;
                 this.Relations.CollectionChanged += schemaChangedHandler1;
                 return;
-            }
-            string strSchema = ((string)(info.GetValue("XmlSchema", typeof(string))));
-            if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
+                }
+            string strSchema = ((string) (info.GetValue("XmlSchema", typeof(string))));
+            if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema))
+                {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["tblChannels"] != null)) {
+                if ((ds.Tables["tblChannels"] != null))
+                    {
                     base.Tables.Add(new tblChannelsDataTable(ds.Tables["tblChannels"]));
-                }
-                if ((ds.Tables["Protocol"] != null)) {
+                    }
+                if ((ds.Tables["Protocol"] != null))
+                    {
                     base.Tables.Add(new ProtocolDataTable(ds.Tables["Protocol"]));
-                }
-                if ((ds.Tables["SampleRates"] != null)) {
+                    }
+                if ((ds.Tables["SampleRates"] != null))
+                    {
                     base.Tables.Add(new SampleRatesDataTable(ds.Tables["SampleRates"]));
-                }
-                if ((ds.Tables["CurrentSettings"] != null)) {
+                    }
+                if ((ds.Tables["CurrentSettings"] != null))
+                    {
                     base.Tables.Add(new CurrentSettingsDataTable(ds.Tables["CurrentSettings"]));
-                }
+                    }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -79,123 +87,149 @@ namespace LA2 {
                 this.EnforceConstraints = ds.EnforceConstraints;
                 this.Merge(ds, false, global::System.Data.MissingSchemaAction.Add);
                 this.InitVars();
-            }
-            else {
+                }
+            else
+                {
                 this.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-            }
+                }
             this.GetSerializationData(info, context);
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
             base.Tables.CollectionChanged += schemaChangedHandler;
             this.Relations.CollectionChanged += schemaChangedHandler;
-        }
-        
+            }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tblChannelsDataTable tblChannels {
-            get {
+        public tblChannelsDataTable tblChannels
+            {
+            get
+                {
                 return this.tabletblChannels;
+                }
             }
-        }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ProtocolDataTable Protocol {
-            get {
+        public ProtocolDataTable Protocol
+            {
+            get
+                {
                 return this.tableProtocol;
+                }
             }
-        }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SampleRatesDataTable SampleRates {
-            get {
+        public SampleRatesDataTable SampleRates
+            {
+            get
+                {
                 return this.tableSampleRates;
+                }
             }
-        }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public CurrentSettingsDataTable CurrentSettings {
-            get {
+        public CurrentSettingsDataTable CurrentSettings
+            {
+            get
+                {
                 return this.tableCurrentSettings;
+                }
             }
-        }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
-        public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
-            get {
+        public override global::System.Data.SchemaSerializationMode SchemaSerializationMode
+            {
+            get
+                {
                 return this._schemaSerializationMode;
-            }
-            set {
+                }
+            set
+                {
                 this._schemaSerializationMode = value;
+                }
             }
-        }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public new global::System.Data.DataTableCollection Tables {
-            get {
+        public new global::System.Data.DataTableCollection Tables
+            {
+            get
+                {
                 return base.Tables;
+                }
             }
-        }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public new global::System.Data.DataRelationCollection Relations {
-            get {
+        public new global::System.Data.DataRelationCollection Relations
+            {
+            get
+                {
                 return base.Relations;
+                }
             }
-        }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected override void InitializeDerivedDataSet() {
+        protected override void InitializeDerivedDataSet ()
+            {
             this.BeginInit();
             this.InitClass();
             this.EndInit();
-        }
-        
+            }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public override global::System.Data.DataSet Clone() {
-            dsChannels cln = ((dsChannels)(base.Clone()));
+        public override global::System.Data.DataSet Clone ()
+            {
+            dsChannels cln = ((dsChannels) (base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
-        }
-        
+            }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected override bool ShouldSerializeTables() {
+        protected override bool ShouldSerializeTables ()
+            {
             return false;
-        }
-        
+            }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected override bool ShouldSerializeRelations() {
+        protected override bool ShouldSerializeRelations ()
+            {
             return false;
-        }
-        
+            }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected override void ReadXmlSerializable(global::System.Xml.XmlReader reader) {
-            if ((this.DetermineSchemaSerializationMode(reader) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
+        protected override void ReadXmlSerializable ( global::System.Xml.XmlReader reader )
+            {
+            if ((this.DetermineSchemaSerializationMode(reader) == global::System.Data.SchemaSerializationMode.IncludeSchema))
+                {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["tblChannels"] != null)) {
+                if ((ds.Tables["tblChannels"] != null))
+                    {
                     base.Tables.Add(new tblChannelsDataTable(ds.Tables["tblChannels"]));
-                }
-                if ((ds.Tables["Protocol"] != null)) {
+                    }
+                if ((ds.Tables["Protocol"] != null))
+                    {
                     base.Tables.Add(new ProtocolDataTable(ds.Tables["Protocol"]));
-                }
-                if ((ds.Tables["SampleRates"] != null)) {
+                    }
+                if ((ds.Tables["SampleRates"] != null))
+                    {
                     base.Tables.Add(new SampleRatesDataTable(ds.Tables["SampleRates"]));
-                }
-                if ((ds.Tables["CurrentSettings"] != null)) {
+                    }
+                if ((ds.Tables["CurrentSettings"] != null))
+                    {
                     base.Tables.Add(new CurrentSettingsDataTable(ds.Tables["CurrentSettings"]));
-                }
+                    }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -204,56 +238,69 @@ namespace LA2 {
                 this.EnforceConstraints = ds.EnforceConstraints;
                 this.Merge(ds, false, global::System.Data.MissingSchemaAction.Add);
                 this.InitVars();
-            }
-            else {
+                }
+            else
+                {
                 this.ReadXml(reader);
                 this.InitVars();
+                }
             }
-        }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected override global::System.Xml.Schema.XmlSchema GetSchemaSerializable() {
+        protected override global::System.Xml.Schema.XmlSchema GetSchemaSerializable ()
+            {
             global::System.IO.MemoryStream stream = new global::System.IO.MemoryStream();
             this.WriteXmlSchema(new global::System.Xml.XmlTextWriter(stream, null));
             stream.Position = 0;
             return global::System.Xml.Schema.XmlSchema.Read(new global::System.Xml.XmlTextReader(stream), null);
-        }
-        
+            }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        internal void InitVars() {
+        internal void InitVars ()
+            {
             this.InitVars(true);
-        }
-        
+            }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        internal void InitVars(bool initTable) {
-            this.tabletblChannels = ((tblChannelsDataTable)(base.Tables["tblChannels"]));
-            if ((initTable == true)) {
-                if ((this.tabletblChannels != null)) {
+        internal void InitVars ( bool initTable )
+            {
+            this.tabletblChannels = ((tblChannelsDataTable) (base.Tables["tblChannels"]));
+            if ((initTable == true))
+                {
+                if ((this.tabletblChannels != null))
+                    {
                     this.tabletblChannels.InitVars();
+                    }
                 }
-            }
-            this.tableProtocol = ((ProtocolDataTable)(base.Tables["Protocol"]));
-            if ((initTable == true)) {
-                if ((this.tableProtocol != null)) {
+            this.tableProtocol = ((ProtocolDataTable) (base.Tables["Protocol"]));
+            if ((initTable == true))
+                {
+                if ((this.tableProtocol != null))
+                    {
                     this.tableProtocol.InitVars();
+                    }
                 }
-            }
-            this.tableSampleRates = ((SampleRatesDataTable)(base.Tables["SampleRates"]));
-            if ((initTable == true)) {
-                if ((this.tableSampleRates != null)) {
+            this.tableSampleRates = ((SampleRatesDataTable) (base.Tables["SampleRates"]));
+            if ((initTable == true))
+                {
+                if ((this.tableSampleRates != null))
+                    {
                     this.tableSampleRates.InitVars();
+                    }
                 }
-            }
-            this.tableCurrentSettings = ((CurrentSettingsDataTable)(base.Tables["CurrentSettings"]));
-            if ((initTable == true)) {
-                if ((this.tableCurrentSettings != null)) {
+            this.tableCurrentSettings = ((CurrentSettingsDataTable) (base.Tables["CurrentSettings"]));
+            if ((initTable == true))
+                {
+                if ((this.tableCurrentSettings != null))
+                    {
                     this.tableCurrentSettings.InitVars();
+                    }
                 }
             }
-        }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private void InitClass() {
+        private void InitClass ()
+            {
             this.DataSetName = "dsChannels";
             this.Prefix = "";
             this.Namespace = "http://tempuri.org/DataSet1.xsd";
@@ -267,37 +314,44 @@ namespace LA2 {
             base.Tables.Add(this.tableSampleRates);
             this.tableCurrentSettings = new CurrentSettingsDataTable();
             base.Tables.Add(this.tableCurrentSettings);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private bool ShouldSerializetblChannels() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private bool ShouldSerializeProtocol() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private bool ShouldSerializeSampleRates() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private bool ShouldSerializeCurrentSettings() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
-            if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
-                this.InitVars();
             }
-        }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+        private bool ShouldSerializetblChannels ()
+            {
+            return false;
+            }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeProtocol ()
+            {
+            return false;
+            }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeSampleRates ()
+            {
+            return false;
+            }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeCurrentSettings ()
+            {
+            return false;
+            }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void SchemaChanged ( object sender, global::System.ComponentModel.CollectionChangeEventArgs e )
+            {
+            if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove))
+                {
+                this.InitVars();
+                }
+            }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema ( global::System.Xml.Schema.XmlSchemaSet xs )
+            {
             dsChannels ds = new dsChannels();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -306,164 +360,196 @@ namespace LA2 {
             sequence.Items.Add(any);
             type.Particle = sequence;
             global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-            if (xs.Contains(dsSchema.TargetNamespace)) {
+            if (xs.Contains(dsSchema.TargetNamespace))
+                {
                 global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
                 global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                try {
+                try
+                    {
                     global::System.Xml.Schema.XmlSchema schema = null;
                     dsSchema.Write(s1);
-                    for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                        schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                    for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator() ; schemas.MoveNext() ;)
+                        {
+                        schema = ((global::System.Xml.Schema.XmlSchema) (schemas.Current));
                         s2.SetLength(0);
                         schema.Write(s2);
-                        if ((s1.Length == s2.Length)) {
+                        if ((s1.Length == s2.Length))
+                            {
                             s1.Position = 0;
                             s2.Position = 0;
-                            for (; ((s1.Position != s1.Length) 
-                                        && (s1.ReadByte() == s2.ReadByte())); ) {
+                            for (; ((s1.Position != s1.Length)
+                                        && (s1.ReadByte() == s2.ReadByte())) ;)
+                                {
                                 ;
-                            }
-                            if ((s1.Position == s1.Length)) {
+                                }
+                            if ((s1.Position == s1.Length))
+                                {
                                 return type;
+                                }
                             }
                         }
                     }
-                }
-                finally {
-                    if ((s1 != null)) {
+                finally
+                    {
+                    if ((s1 != null))
+                        {
                         s1.Close();
-                    }
-                    if ((s2 != null)) {
+                        }
+                    if ((s2 != null))
+                        {
                         s2.Close();
+                        }
                     }
                 }
-            }
             xs.Add(dsSchema);
             return type;
-        }
-        
-        public delegate void tblChannelsRowChangeEventHandler(object sender, tblChannelsRowChangeEvent e);
-        
-        public delegate void ProtocolRowChangeEventHandler(object sender, ProtocolRowChangeEvent e);
-        
-        public delegate void SampleRatesRowChangeEventHandler(object sender, SampleRatesRowChangeEvent e);
-        
-        public delegate void CurrentSettingsRowChangeEventHandler(object sender, CurrentSettingsRowChangeEvent e);
-        
+            }
+
+        public delegate void tblChannelsRowChangeEventHandler ( object sender, tblChannelsRowChangeEvent e );
+
+        public delegate void ProtocolRowChangeEventHandler ( object sender, ProtocolRowChangeEvent e );
+
+        public delegate void SampleRatesRowChangeEventHandler ( object sender, SampleRatesRowChangeEvent e );
+
+        public delegate void CurrentSettingsRowChangeEventHandler ( object sender, CurrentSettingsRowChangeEvent e );
+
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tblChannelsDataTable : global::System.Data.TypedTableBase<tblChannelsRow> {
-            
+        public partial class tblChannelsDataTable :global::System.Data.TypedTableBase<tblChannelsRow>
+            {
+
             private global::System.Data.DataColumn columnLabel;
-            
+
             private global::System.Data.DataColumn columnVisible;
-            
+
             private global::System.Data.DataColumn columnTrigger;
-            
+
             private global::System.Data.DataColumn columnMask;
-            
+
             private global::System.Data.DataColumn columnArm;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public tblChannelsDataTable() {
+            public tblChannelsDataTable ()
+                {
                 this.TableName = "tblChannels";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal tblChannelsDataTable(global::System.Data.DataTable table) {
+            internal tblChannelsDataTable ( global::System.Data.DataTable table )
+                {
                 this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive))
+                    {
                     this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString()))
+                    {
                     this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
+                    }
+                if ((table.Namespace != table.DataSet.Namespace))
+                    {
                     this.Namespace = table.Namespace;
-                }
+                    }
                 this.Prefix = table.Prefix;
                 this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected tblChannelsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
+            protected tblChannelsDataTable ( global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context ) :
+                    base(info, context)
+                {
                 this.InitVars();
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn LabelColumn {
-                get {
+            public global::System.Data.DataColumn LabelColumn
+                {
+                get
+                    {
                     return this.columnLabel;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn VisibleColumn {
-                get {
+            public global::System.Data.DataColumn VisibleColumn
+                {
+                get
+                    {
                     return this.columnVisible;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn TriggerColumn {
-                get {
+            public global::System.Data.DataColumn TriggerColumn
+                {
+                get
+                    {
                     return this.columnTrigger;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn MaskColumn {
-                get {
+            public global::System.Data.DataColumn MaskColumn
+                {
+                get
+                    {
                     return this.columnMask;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn ArmColumn {
-                get {
+            public global::System.Data.DataColumn ArmColumn
+                {
+                get
+                    {
                     return this.columnArm;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
+            public int Count
+                {
+                get
+                    {
                     return this.Rows.Count;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public tblChannelsRow this[int index] {
-                get {
-                    return ((tblChannelsRow)(this.Rows[index]));
+            public tblChannelsRow this[int index]
+                {
+                get
+                    {
+                    return ((tblChannelsRow) (this.Rows[index]));
+                    }
                 }
-            }
-            
+
             public event tblChannelsRowChangeEventHandler tblChannelsRowChanging;
-            
+
             public event tblChannelsRowChangeEventHandler tblChannelsRowChanged;
-            
+
             public event tblChannelsRowChangeEventHandler tblChannelsRowDeleting;
-            
+
             public event tblChannelsRowChangeEventHandler tblChannelsRowDeleted;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void AddtblChannelsRow(tblChannelsRow row) {
+            public void AddtblChannelsRow ( tblChannelsRow row )
+                {
                 this.Rows.Add(row);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public tblChannelsRow AddtblChannelsRow(string Label, bool Visible, bool Trigger, bool Mask, bool Arm) {
-                tblChannelsRow rowtblChannelsRow = ((tblChannelsRow)(this.NewRow()));
+            public tblChannelsRow AddtblChannelsRow ( string Label, bool Visible, bool Trigger, bool Mask, bool Arm )
+                {
+                tblChannelsRow rowtblChannelsRow = ((tblChannelsRow) (this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Label,
                         Visible,
@@ -473,31 +559,35 @@ namespace LA2 {
                 rowtblChannelsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblChannelsRow);
                 return rowtblChannelsRow;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public override global::System.Data.DataTable Clone() {
-                tblChannelsDataTable cln = ((tblChannelsDataTable)(base.Clone()));
+            public override global::System.Data.DataTable Clone ()
+                {
+                tblChannelsDataTable cln = ((tblChannelsDataTable) (base.Clone()));
                 cln.InitVars();
                 return cln;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Data.DataTable CreateInstance() {
+            protected override global::System.Data.DataTable CreateInstance ()
+                {
                 return new tblChannelsDataTable();
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal void InitVars() {
+            internal void InitVars ()
+                {
                 this.columnLabel = base.Columns["Label"];
                 this.columnVisible = base.Columns["Visible"];
                 this.columnTrigger = base.Columns["Trigger"];
                 this.columnMask = base.Columns["Mask"];
                 this.columnArm = base.Columns["Arm"];
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            private void InitClass() {
+            private void InitClass ()
+                {
                 this.columnLabel = new global::System.Data.DataColumn("Label", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLabel);
                 this.columnVisible = new global::System.Data.DataColumn("Visible", typeof(bool), null, global::System.Data.MappingType.Element);
@@ -508,67 +598,80 @@ namespace LA2 {
                 base.Columns.Add(this.columnMask);
                 this.columnArm = new global::System.Data.DataColumn("Arm", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnArm);
-                this.columnLabel.DefaultValue = ((string)("\"\""));
-                this.columnVisible.DefaultValue = ((bool)(false));
-                this.columnTrigger.DefaultValue = ((bool)(false));
-                this.columnMask.DefaultValue = ((bool)(false));
-                this.columnArm.DefaultValue = ((bool)(false));
-            }
-            
+                this.columnLabel.DefaultValue = ((string) ("\"\""));
+                this.columnVisible.DefaultValue = ((bool) (false));
+                this.columnTrigger.DefaultValue = ((bool) (false));
+                this.columnMask.DefaultValue = ((bool) (false));
+                this.columnArm.DefaultValue = ((bool) (false));
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public tblChannelsRow NewtblChannelsRow() {
-                return ((tblChannelsRow)(this.NewRow()));
-            }
-            
+            public tblChannelsRow NewtblChannelsRow ()
+                {
+                return ((tblChannelsRow) (this.NewRow()));
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+            protected override global::System.Data.DataRow NewRowFromBuilder ( global::System.Data.DataRowBuilder builder )
+                {
                 return new tblChannelsRow(builder);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Type GetRowType() {
+            protected override global::System.Type GetRowType ()
+                {
                 return typeof(tblChannelsRow);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowChanged ( global::System.Data.DataRowChangeEventArgs e )
+                {
                 base.OnRowChanged(e);
-                if ((this.tblChannelsRowChanged != null)) {
-                    this.tblChannelsRowChanged(this, new tblChannelsRowChangeEvent(((tblChannelsRow)(e.Row)), e.Action));
+                if ((this.tblChannelsRowChanged != null))
+                    {
+                    this.tblChannelsRowChanged(this, new tblChannelsRowChangeEvent(((tblChannelsRow) (e.Row)), e.Action));
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowChanging ( global::System.Data.DataRowChangeEventArgs e )
+                {
                 base.OnRowChanging(e);
-                if ((this.tblChannelsRowChanging != null)) {
-                    this.tblChannelsRowChanging(this, new tblChannelsRowChangeEvent(((tblChannelsRow)(e.Row)), e.Action));
+                if ((this.tblChannelsRowChanging != null))
+                    {
+                    this.tblChannelsRowChanging(this, new tblChannelsRowChangeEvent(((tblChannelsRow) (e.Row)), e.Action));
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowDeleted ( global::System.Data.DataRowChangeEventArgs e )
+                {
                 base.OnRowDeleted(e);
-                if ((this.tblChannelsRowDeleted != null)) {
-                    this.tblChannelsRowDeleted(this, new tblChannelsRowChangeEvent(((tblChannelsRow)(e.Row)), e.Action));
+                if ((this.tblChannelsRowDeleted != null))
+                    {
+                    this.tblChannelsRowDeleted(this, new tblChannelsRowChangeEvent(((tblChannelsRow) (e.Row)), e.Action));
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowDeleting ( global::System.Data.DataRowChangeEventArgs e )
+                {
                 base.OnRowDeleting(e);
-                if ((this.tblChannelsRowDeleting != null)) {
-                    this.tblChannelsRowDeleting(this, new tblChannelsRowChangeEvent(((tblChannelsRow)(e.Row)), e.Action));
+                if ((this.tblChannelsRowDeleting != null))
+                    {
+                    this.tblChannelsRowDeleting(this, new tblChannelsRowChangeEvent(((tblChannelsRow) (e.Row)), e.Action));
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void RemovetblChannelsRow(tblChannelsRow row) {
+            public void RemovetblChannelsRow ( tblChannelsRow row )
+                {
                 this.Rows.Remove(row);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema ( global::System.Xml.Schema.XmlSchemaSet xs )
+                {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
                 dsChannels ds = new dsChannels();
@@ -593,139 +696,167 @@ namespace LA2 {
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
+                if (xs.Contains(dsSchema.TargetNamespace))
+                    {
                     global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
                     global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
+                    try
+                        {
                         global::System.Xml.Schema.XmlSchema schema = null;
                         dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator() ; schemas.MoveNext() ;)
+                            {
+                            schema = ((global::System.Xml.Schema.XmlSchema) (schemas.Current));
                             s2.SetLength(0);
                             schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
+                            if ((s1.Length == s2.Length))
+                                {
                                 s1.Position = 0;
                                 s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                for (; ((s1.Position != s1.Length)
+                                            && (s1.ReadByte() == s2.ReadByte())) ;)
+                                    {
                                     ;
-                                }
-                                if ((s1.Position == s1.Length)) {
+                                    }
+                                if ((s1.Position == s1.Length))
+                                    {
                                     return type;
+                                    }
                                 }
                             }
                         }
-                    }
-                    finally {
-                        if ((s1 != null)) {
+                    finally
+                        {
+                        if ((s1 != null))
+                            {
                             s1.Close();
-                        }
-                        if ((s2 != null)) {
+                            }
+                        if ((s2 != null))
+                            {
                             s2.Close();
+                            }
                         }
                     }
-                }
                 xs.Add(dsSchema);
                 return type;
+                }
             }
-        }
-        
+
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ProtocolDataTable : global::System.Data.TypedTableBase<ProtocolRow> {
-            
+        public partial class ProtocolDataTable :global::System.Data.TypedTableBase<ProtocolRow>
+            {
+
             private global::System.Data.DataColumn columnName;
-            
+
             private global::System.Data.DataColumn columnCommandString;
-            
+
             private global::System.Data.DataColumn columnDefaultTicksPerMicroSec;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public ProtocolDataTable() {
+            public ProtocolDataTable ()
+                {
                 this.TableName = "Protocol";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal ProtocolDataTable(global::System.Data.DataTable table) {
+            internal ProtocolDataTable ( global::System.Data.DataTable table )
+                {
                 this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive))
+                    {
                     this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString()))
+                    {
                     this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
+                    }
+                if ((table.Namespace != table.DataSet.Namespace))
+                    {
                     this.Namespace = table.Namespace;
-                }
+                    }
                 this.Prefix = table.Prefix;
                 this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected ProtocolDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
+            protected ProtocolDataTable ( global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context ) :
+                    base(info, context)
+                {
                 this.InitVars();
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn NameColumn {
-                get {
+            public global::System.Data.DataColumn NameColumn
+                {
+                get
+                    {
                     return this.columnName;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn CommandStringColumn {
-                get {
+            public global::System.Data.DataColumn CommandStringColumn
+                {
+                get
+                    {
                     return this.columnCommandString;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn DefaultTicksPerMicroSecColumn {
-                get {
+            public global::System.Data.DataColumn DefaultTicksPerMicroSecColumn
+                {
+                get
+                    {
                     return this.columnDefaultTicksPerMicroSec;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
+            public int Count
+                {
+                get
+                    {
                     return this.Rows.Count;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public ProtocolRow this[int index] {
-                get {
-                    return ((ProtocolRow)(this.Rows[index]));
+            public ProtocolRow this[int index]
+                {
+                get
+                    {
+                    return ((ProtocolRow) (this.Rows[index]));
+                    }
                 }
-            }
-            
+
             public event ProtocolRowChangeEventHandler ProtocolRowChanging;
-            
+
             public event ProtocolRowChangeEventHandler ProtocolRowChanged;
-            
+
             public event ProtocolRowChangeEventHandler ProtocolRowDeleting;
-            
+
             public event ProtocolRowChangeEventHandler ProtocolRowDeleted;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void AddProtocolRow(ProtocolRow row) {
+            public void AddProtocolRow ( ProtocolRow row )
+                {
                 this.Rows.Add(row);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public ProtocolRow AddProtocolRow(string Name, string CommandString, decimal DefaultTicksPerMicroSec) {
-                ProtocolRow rowProtocolRow = ((ProtocolRow)(this.NewRow()));
+            public ProtocolRow AddProtocolRow ( string Name, string CommandString, decimal DefaultTicksPerMicroSec )
+                {
+                ProtocolRow rowProtocolRow = ((ProtocolRow) (this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Name,
                         CommandString,
@@ -733,91 +864,108 @@ namespace LA2 {
                 rowProtocolRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowProtocolRow);
                 return rowProtocolRow;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public override global::System.Data.DataTable Clone() {
-                ProtocolDataTable cln = ((ProtocolDataTable)(base.Clone()));
+            public override global::System.Data.DataTable Clone ()
+                {
+                ProtocolDataTable cln = ((ProtocolDataTable) (base.Clone()));
                 cln.InitVars();
                 return cln;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Data.DataTable CreateInstance() {
+            protected override global::System.Data.DataTable CreateInstance ()
+                {
                 return new ProtocolDataTable();
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal void InitVars() {
+            internal void InitVars ()
+                {
                 this.columnName = base.Columns["Name"];
                 this.columnCommandString = base.Columns["CommandString"];
                 this.columnDefaultTicksPerMicroSec = base.Columns["DefaultTicksPerMicroSec"];
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            private void InitClass() {
+            private void InitClass ()
+                {
                 this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName);
                 this.columnCommandString = new global::System.Data.DataColumn("CommandString", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCommandString);
                 this.columnDefaultTicksPerMicroSec = new global::System.Data.DataColumn("DefaultTicksPerMicroSec", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDefaultTicksPerMicroSec);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public ProtocolRow NewProtocolRow() {
-                return ((ProtocolRow)(this.NewRow()));
-            }
-            
+            public ProtocolRow NewProtocolRow ()
+                {
+                return ((ProtocolRow) (this.NewRow()));
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+            protected override global::System.Data.DataRow NewRowFromBuilder ( global::System.Data.DataRowBuilder builder )
+                {
                 return new ProtocolRow(builder);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Type GetRowType() {
+            protected override global::System.Type GetRowType ()
+                {
                 return typeof(ProtocolRow);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowChanged ( global::System.Data.DataRowChangeEventArgs e )
+                {
                 base.OnRowChanged(e);
-                if ((this.ProtocolRowChanged != null)) {
-                    this.ProtocolRowChanged(this, new ProtocolRowChangeEvent(((ProtocolRow)(e.Row)), e.Action));
+                if ((this.ProtocolRowChanged != null))
+                    {
+                    this.ProtocolRowChanged(this, new ProtocolRowChangeEvent(((ProtocolRow) (e.Row)), e.Action));
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowChanging ( global::System.Data.DataRowChangeEventArgs e )
+                {
                 base.OnRowChanging(e);
-                if ((this.ProtocolRowChanging != null)) {
-                    this.ProtocolRowChanging(this, new ProtocolRowChangeEvent(((ProtocolRow)(e.Row)), e.Action));
+                if ((this.ProtocolRowChanging != null))
+                    {
+                    this.ProtocolRowChanging(this, new ProtocolRowChangeEvent(((ProtocolRow) (e.Row)), e.Action));
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowDeleted ( global::System.Data.DataRowChangeEventArgs e )
+                {
                 base.OnRowDeleted(e);
-                if ((this.ProtocolRowDeleted != null)) {
-                    this.ProtocolRowDeleted(this, new ProtocolRowChangeEvent(((ProtocolRow)(e.Row)), e.Action));
+                if ((this.ProtocolRowDeleted != null))
+                    {
+                    this.ProtocolRowDeleted(this, new ProtocolRowChangeEvent(((ProtocolRow) (e.Row)), e.Action));
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowDeleting ( global::System.Data.DataRowChangeEventArgs e )
+                {
                 base.OnRowDeleting(e);
-                if ((this.ProtocolRowDeleting != null)) {
-                    this.ProtocolRowDeleting(this, new ProtocolRowChangeEvent(((ProtocolRow)(e.Row)), e.Action));
+                if ((this.ProtocolRowDeleting != null))
+                    {
+                    this.ProtocolRowDeleting(this, new ProtocolRowChangeEvent(((ProtocolRow) (e.Row)), e.Action));
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void RemoveProtocolRow(ProtocolRow row) {
+            public void RemoveProtocolRow ( ProtocolRow row )
+                {
                 this.Rows.Remove(row);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema ( global::System.Xml.Schema.XmlSchemaSet xs )
+                {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
                 dsChannels ds = new dsChannels();
@@ -842,139 +990,167 @@ namespace LA2 {
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
+                if (xs.Contains(dsSchema.TargetNamespace))
+                    {
                     global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
                     global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
+                    try
+                        {
                         global::System.Xml.Schema.XmlSchema schema = null;
                         dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator() ; schemas.MoveNext() ;)
+                            {
+                            schema = ((global::System.Xml.Schema.XmlSchema) (schemas.Current));
                             s2.SetLength(0);
                             schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
+                            if ((s1.Length == s2.Length))
+                                {
                                 s1.Position = 0;
                                 s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                for (; ((s1.Position != s1.Length)
+                                            && (s1.ReadByte() == s2.ReadByte())) ;)
+                                    {
                                     ;
-                                }
-                                if ((s1.Position == s1.Length)) {
+                                    }
+                                if ((s1.Position == s1.Length))
+                                    {
                                     return type;
+                                    }
                                 }
                             }
                         }
-                    }
-                    finally {
-                        if ((s1 != null)) {
+                    finally
+                        {
+                        if ((s1 != null))
+                            {
                             s1.Close();
-                        }
-                        if ((s2 != null)) {
+                            }
+                        if ((s2 != null))
+                            {
                             s2.Close();
+                            }
                         }
                     }
-                }
                 xs.Add(dsSchema);
                 return type;
+                }
             }
-        }
-        
+
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SampleRatesDataTable : global::System.Data.TypedTableBase<SampleRatesRow> {
-            
+        public partial class SampleRatesDataTable :global::System.Data.TypedTableBase<SampleRatesRow>
+            {
+
             private global::System.Data.DataColumn columnName;
-            
+
             private global::System.Data.DataColumn columnValue;
-            
+
             private global::System.Data.DataColumn columnTicksPerMicroSec;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public SampleRatesDataTable() {
+            public SampleRatesDataTable ()
+                {
                 this.TableName = "SampleRates";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal SampleRatesDataTable(global::System.Data.DataTable table) {
+            internal SampleRatesDataTable ( global::System.Data.DataTable table )
+                {
                 this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive))
+                    {
                     this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString()))
+                    {
                     this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
+                    }
+                if ((table.Namespace != table.DataSet.Namespace))
+                    {
                     this.Namespace = table.Namespace;
-                }
+                    }
                 this.Prefix = table.Prefix;
                 this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected SampleRatesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
+            protected SampleRatesDataTable ( global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context ) :
+                    base(info, context)
+                {
                 this.InitVars();
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn NameColumn {
-                get {
+            public global::System.Data.DataColumn NameColumn
+                {
+                get
+                    {
                     return this.columnName;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn ValueColumn {
-                get {
+            public global::System.Data.DataColumn ValueColumn
+                {
+                get
+                    {
                     return this.columnValue;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn TicksPerMicroSecColumn {
-                get {
+            public global::System.Data.DataColumn TicksPerMicroSecColumn
+                {
+                get
+                    {
                     return this.columnTicksPerMicroSec;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
+            public int Count
+                {
+                get
+                    {
                     return this.Rows.Count;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public SampleRatesRow this[int index] {
-                get {
-                    return ((SampleRatesRow)(this.Rows[index]));
+            public SampleRatesRow this[int index]
+                {
+                get
+                    {
+                    return ((SampleRatesRow) (this.Rows[index]));
+                    }
                 }
-            }
-            
+
             public event SampleRatesRowChangeEventHandler SampleRatesRowChanging;
-            
+
             public event SampleRatesRowChangeEventHandler SampleRatesRowChanged;
-            
+
             public event SampleRatesRowChangeEventHandler SampleRatesRowDeleting;
-            
+
             public event SampleRatesRowChangeEventHandler SampleRatesRowDeleted;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void AddSampleRatesRow(SampleRatesRow row) {
+            public void AddSampleRatesRow ( SampleRatesRow row )
+                {
                 this.Rows.Add(row);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public SampleRatesRow AddSampleRatesRow(string Name, string Value, decimal TicksPerMicroSec) {
-                SampleRatesRow rowSampleRatesRow = ((SampleRatesRow)(this.NewRow()));
+            public SampleRatesRow AddSampleRatesRow ( string Name, string Value, decimal TicksPerMicroSec )
+                {
+                SampleRatesRow rowSampleRatesRow = ((SampleRatesRow) (this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Name,
                         Value,
@@ -982,91 +1158,108 @@ namespace LA2 {
                 rowSampleRatesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSampleRatesRow);
                 return rowSampleRatesRow;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public override global::System.Data.DataTable Clone() {
-                SampleRatesDataTable cln = ((SampleRatesDataTable)(base.Clone()));
+            public override global::System.Data.DataTable Clone ()
+                {
+                SampleRatesDataTable cln = ((SampleRatesDataTable) (base.Clone()));
                 cln.InitVars();
                 return cln;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Data.DataTable CreateInstance() {
+            protected override global::System.Data.DataTable CreateInstance ()
+                {
                 return new SampleRatesDataTable();
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal void InitVars() {
+            internal void InitVars ()
+                {
                 this.columnName = base.Columns["Name"];
                 this.columnValue = base.Columns["Value"];
                 this.columnTicksPerMicroSec = base.Columns["TicksPerMicroSec"];
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            private void InitClass() {
+            private void InitClass ()
+                {
                 this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName);
                 this.columnValue = new global::System.Data.DataColumn("Value", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnValue);
                 this.columnTicksPerMicroSec = new global::System.Data.DataColumn("TicksPerMicroSec", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTicksPerMicroSec);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public SampleRatesRow NewSampleRatesRow() {
-                return ((SampleRatesRow)(this.NewRow()));
-            }
-            
+            public SampleRatesRow NewSampleRatesRow ()
+                {
+                return ((SampleRatesRow) (this.NewRow()));
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+            protected override global::System.Data.DataRow NewRowFromBuilder ( global::System.Data.DataRowBuilder builder )
+                {
                 return new SampleRatesRow(builder);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Type GetRowType() {
+            protected override global::System.Type GetRowType ()
+                {
                 return typeof(SampleRatesRow);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowChanged ( global::System.Data.DataRowChangeEventArgs e )
+                {
                 base.OnRowChanged(e);
-                if ((this.SampleRatesRowChanged != null)) {
-                    this.SampleRatesRowChanged(this, new SampleRatesRowChangeEvent(((SampleRatesRow)(e.Row)), e.Action));
+                if ((this.SampleRatesRowChanged != null))
+                    {
+                    this.SampleRatesRowChanged(this, new SampleRatesRowChangeEvent(((SampleRatesRow) (e.Row)), e.Action));
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowChanging ( global::System.Data.DataRowChangeEventArgs e )
+                {
                 base.OnRowChanging(e);
-                if ((this.SampleRatesRowChanging != null)) {
-                    this.SampleRatesRowChanging(this, new SampleRatesRowChangeEvent(((SampleRatesRow)(e.Row)), e.Action));
+                if ((this.SampleRatesRowChanging != null))
+                    {
+                    this.SampleRatesRowChanging(this, new SampleRatesRowChangeEvent(((SampleRatesRow) (e.Row)), e.Action));
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowDeleted ( global::System.Data.DataRowChangeEventArgs e )
+                {
                 base.OnRowDeleted(e);
-                if ((this.SampleRatesRowDeleted != null)) {
-                    this.SampleRatesRowDeleted(this, new SampleRatesRowChangeEvent(((SampleRatesRow)(e.Row)), e.Action));
+                if ((this.SampleRatesRowDeleted != null))
+                    {
+                    this.SampleRatesRowDeleted(this, new SampleRatesRowChangeEvent(((SampleRatesRow) (e.Row)), e.Action));
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowDeleting ( global::System.Data.DataRowChangeEventArgs e )
+                {
                 base.OnRowDeleting(e);
-                if ((this.SampleRatesRowDeleting != null)) {
-                    this.SampleRatesRowDeleting(this, new SampleRatesRowChangeEvent(((SampleRatesRow)(e.Row)), e.Action));
+                if ((this.SampleRatesRowDeleting != null))
+                    {
+                    this.SampleRatesRowDeleting(this, new SampleRatesRowChangeEvent(((SampleRatesRow) (e.Row)), e.Action));
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void RemoveSampleRatesRow(SampleRatesRow row) {
+            public void RemoveSampleRatesRow ( SampleRatesRow row )
+                {
                 this.Rows.Remove(row);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema ( global::System.Xml.Schema.XmlSchemaSet xs )
+                {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
                 dsChannels ds = new dsChannels();
@@ -1091,139 +1284,167 @@ namespace LA2 {
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
+                if (xs.Contains(dsSchema.TargetNamespace))
+                    {
                     global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
                     global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
+                    try
+                        {
                         global::System.Xml.Schema.XmlSchema schema = null;
                         dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator() ; schemas.MoveNext() ;)
+                            {
+                            schema = ((global::System.Xml.Schema.XmlSchema) (schemas.Current));
                             s2.SetLength(0);
                             schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
+                            if ((s1.Length == s2.Length))
+                                {
                                 s1.Position = 0;
                                 s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                for (; ((s1.Position != s1.Length)
+                                            && (s1.ReadByte() == s2.ReadByte())) ;)
+                                    {
                                     ;
-                                }
-                                if ((s1.Position == s1.Length)) {
+                                    }
+                                if ((s1.Position == s1.Length))
+                                    {
                                     return type;
+                                    }
                                 }
                             }
                         }
-                    }
-                    finally {
-                        if ((s1 != null)) {
+                    finally
+                        {
+                        if ((s1 != null))
+                            {
                             s1.Close();
-                        }
-                        if ((s2 != null)) {
+                            }
+                        if ((s2 != null))
+                            {
                             s2.Close();
+                            }
                         }
                     }
-                }
                 xs.Add(dsSchema);
                 return type;
+                }
             }
-        }
-        
+
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class CurrentSettingsDataTable : global::System.Data.TypedTableBase<CurrentSettingsRow> {
-            
+        public partial class CurrentSettingsDataTable :global::System.Data.TypedTableBase<CurrentSettingsRow>
+            {
+
             private global::System.Data.DataColumn columnComPort;
-            
+
             private global::System.Data.DataColumn columnBaud;
-            
+
             private global::System.Data.DataColumn columnProtocol;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CurrentSettingsDataTable() {
+            public CurrentSettingsDataTable ()
+                {
                 this.TableName = "CurrentSettings";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal CurrentSettingsDataTable(global::System.Data.DataTable table) {
+            internal CurrentSettingsDataTable ( global::System.Data.DataTable table )
+                {
                 this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive))
+                    {
                     this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString()))
+                    {
                     this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
+                    }
+                if ((table.Namespace != table.DataSet.Namespace))
+                    {
                     this.Namespace = table.Namespace;
-                }
+                    }
                 this.Prefix = table.Prefix;
                 this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected CurrentSettingsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
+            protected CurrentSettingsDataTable ( global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context ) :
+                    base(info, context)
+                {
                 this.InitVars();
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn ComPortColumn {
-                get {
+            public global::System.Data.DataColumn ComPortColumn
+                {
+                get
+                    {
                     return this.columnComPort;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn BaudColumn {
-                get {
+            public global::System.Data.DataColumn BaudColumn
+                {
+                get
+                    {
                     return this.columnBaud;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn ProtocolColumn {
-                get {
+            public global::System.Data.DataColumn ProtocolColumn
+                {
+                get
+                    {
                     return this.columnProtocol;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
+            public int Count
+                {
+                get
+                    {
                     return this.Rows.Count;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CurrentSettingsRow this[int index] {
-                get {
-                    return ((CurrentSettingsRow)(this.Rows[index]));
+            public CurrentSettingsRow this[int index]
+                {
+                get
+                    {
+                    return ((CurrentSettingsRow) (this.Rows[index]));
+                    }
                 }
-            }
-            
+
             public event CurrentSettingsRowChangeEventHandler CurrentSettingsRowChanging;
-            
+
             public event CurrentSettingsRowChangeEventHandler CurrentSettingsRowChanged;
-            
+
             public event CurrentSettingsRowChangeEventHandler CurrentSettingsRowDeleting;
-            
+
             public event CurrentSettingsRowChangeEventHandler CurrentSettingsRowDeleted;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void AddCurrentSettingsRow(CurrentSettingsRow row) {
+            public void AddCurrentSettingsRow ( CurrentSettingsRow row )
+                {
                 this.Rows.Add(row);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CurrentSettingsRow AddCurrentSettingsRow(string ComPort, int Baud, string Protocol) {
-                CurrentSettingsRow rowCurrentSettingsRow = ((CurrentSettingsRow)(this.NewRow()));
+            public CurrentSettingsRow AddCurrentSettingsRow ( string ComPort, int Baud, string Protocol )
+                {
+                CurrentSettingsRow rowCurrentSettingsRow = ((CurrentSettingsRow) (this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ComPort,
                         Baud,
@@ -1231,91 +1452,108 @@ namespace LA2 {
                 rowCurrentSettingsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCurrentSettingsRow);
                 return rowCurrentSettingsRow;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public override global::System.Data.DataTable Clone() {
-                CurrentSettingsDataTable cln = ((CurrentSettingsDataTable)(base.Clone()));
+            public override global::System.Data.DataTable Clone ()
+                {
+                CurrentSettingsDataTable cln = ((CurrentSettingsDataTable) (base.Clone()));
                 cln.InitVars();
                 return cln;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Data.DataTable CreateInstance() {
+            protected override global::System.Data.DataTable CreateInstance ()
+                {
                 return new CurrentSettingsDataTable();
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal void InitVars() {
+            internal void InitVars ()
+                {
                 this.columnComPort = base.Columns["ComPort"];
                 this.columnBaud = base.Columns["Baud"];
                 this.columnProtocol = base.Columns["Protocol"];
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            private void InitClass() {
+            private void InitClass ()
+                {
                 this.columnComPort = new global::System.Data.DataColumn("ComPort", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnComPort);
                 this.columnBaud = new global::System.Data.DataColumn("Baud", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBaud);
                 this.columnProtocol = new global::System.Data.DataColumn("Protocol", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProtocol);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CurrentSettingsRow NewCurrentSettingsRow() {
-                return ((CurrentSettingsRow)(this.NewRow()));
-            }
-            
+            public CurrentSettingsRow NewCurrentSettingsRow ()
+                {
+                return ((CurrentSettingsRow) (this.NewRow()));
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+            protected override global::System.Data.DataRow NewRowFromBuilder ( global::System.Data.DataRowBuilder builder )
+                {
                 return new CurrentSettingsRow(builder);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override global::System.Type GetRowType() {
+            protected override global::System.Type GetRowType ()
+                {
                 return typeof(CurrentSettingsRow);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowChanged ( global::System.Data.DataRowChangeEventArgs e )
+                {
                 base.OnRowChanged(e);
-                if ((this.CurrentSettingsRowChanged != null)) {
-                    this.CurrentSettingsRowChanged(this, new CurrentSettingsRowChangeEvent(((CurrentSettingsRow)(e.Row)), e.Action));
+                if ((this.CurrentSettingsRowChanged != null))
+                    {
+                    this.CurrentSettingsRowChanged(this, new CurrentSettingsRowChangeEvent(((CurrentSettingsRow) (e.Row)), e.Action));
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowChanging ( global::System.Data.DataRowChangeEventArgs e )
+                {
                 base.OnRowChanging(e);
-                if ((this.CurrentSettingsRowChanging != null)) {
-                    this.CurrentSettingsRowChanging(this, new CurrentSettingsRowChangeEvent(((CurrentSettingsRow)(e.Row)), e.Action));
+                if ((this.CurrentSettingsRowChanging != null))
+                    {
+                    this.CurrentSettingsRowChanging(this, new CurrentSettingsRowChangeEvent(((CurrentSettingsRow) (e.Row)), e.Action));
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowDeleted ( global::System.Data.DataRowChangeEventArgs e )
+                {
                 base.OnRowDeleted(e);
-                if ((this.CurrentSettingsRowDeleted != null)) {
-                    this.CurrentSettingsRowDeleted(this, new CurrentSettingsRowChangeEvent(((CurrentSettingsRow)(e.Row)), e.Action));
+                if ((this.CurrentSettingsRowDeleted != null))
+                    {
+                    this.CurrentSettingsRowDeleted(this, new CurrentSettingsRowChangeEvent(((CurrentSettingsRow) (e.Row)), e.Action));
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+            protected override void OnRowDeleting ( global::System.Data.DataRowChangeEventArgs e )
+                {
                 base.OnRowDeleting(e);
-                if ((this.CurrentSettingsRowDeleting != null)) {
-                    this.CurrentSettingsRowDeleting(this, new CurrentSettingsRowChangeEvent(((CurrentSettingsRow)(e.Row)), e.Action));
+                if ((this.CurrentSettingsRowDeleting != null))
+                    {
+                    this.CurrentSettingsRowDeleting(this, new CurrentSettingsRowChangeEvent(((CurrentSettingsRow) (e.Row)), e.Action));
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void RemoveCurrentSettingsRow(CurrentSettingsRow row) {
+            public void RemoveCurrentSettingsRow ( CurrentSettingsRow row )
+                {
                 this.Rows.Remove(row);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema ( global::System.Xml.Schema.XmlSchemaSet xs )
+                {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
                 dsChannels ds = new dsChannels();
@@ -1340,577 +1578,716 @@ namespace LA2 {
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
+                if (xs.Contains(dsSchema.TargetNamespace))
+                    {
                     global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
                     global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
+                    try
+                        {
                         global::System.Xml.Schema.XmlSchema schema = null;
                         dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator() ; schemas.MoveNext() ;)
+                            {
+                            schema = ((global::System.Xml.Schema.XmlSchema) (schemas.Current));
                             s2.SetLength(0);
                             schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
+                            if ((s1.Length == s2.Length))
+                                {
                                 s1.Position = 0;
                                 s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                for (; ((s1.Position != s1.Length)
+                                            && (s1.ReadByte() == s2.ReadByte())) ;)
+                                    {
                                     ;
-                                }
-                                if ((s1.Position == s1.Length)) {
+                                    }
+                                if ((s1.Position == s1.Length))
+                                    {
                                     return type;
+                                    }
                                 }
                             }
                         }
-                    }
-                    finally {
-                        if ((s1 != null)) {
+                    finally
+                        {
+                        if ((s1 != null))
+                            {
                             s1.Close();
-                        }
-                        if ((s2 != null)) {
+                            }
+                        if ((s2 != null))
+                            {
                             s2.Close();
+                            }
                         }
                     }
-                }
                 xs.Add(dsSchema);
                 return type;
+                }
             }
-        }
-        
+
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public partial class tblChannelsRow : global::System.Data.DataRow {
-            
+        public partial class tblChannelsRow :global::System.Data.DataRow
+            {
+
             private tblChannelsDataTable tabletblChannels;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal tblChannelsRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tabletblChannels = ((tblChannelsDataTable)(this.Table));
-            }
-            
+            internal tblChannelsRow ( global::System.Data.DataRowBuilder rb ) :
+                    base(rb)
+                {
+                this.tabletblChannels = ((tblChannelsDataTable) (this.Table));
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string Label {
-                get {
-                    if (this.IsLabelNull()) {
+            public string Label
+                {
+                get
+                    {
+                    if (this.IsLabelNull())
+                        {
                         return string.Empty;
+                        }
+                    else
+                        {
+                        return ((string) (this[this.tabletblChannels.LabelColumn]));
+                        }
                     }
-                    else {
-                        return ((string)(this[this.tabletblChannels.LabelColumn]));
-                    }
-                }
-                set {
+                set
+                    {
                     this[this.tabletblChannels.LabelColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool Visible {
-                get {
-                    try {
-                        return ((bool)(this[this.tabletblChannels.VisibleColumn]));
                     }
-                    catch (global::System.InvalidCastException e) {
+                }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Visible
+                {
+                get
+                    {
+                    try
+                        {
+                        return ((bool) (this[this.tabletblChannels.VisibleColumn]));
+                        }
+                    catch (global::System.InvalidCastException e)
+                        {
                         throw new global::System.Data.StrongTypingException("The value for column \'Visible\' in table \'tblChannels\' is DBNull.", e);
+                        }
                     }
-                }
-                set {
+                set
+                    {
                     this[this.tabletblChannels.VisibleColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool Trigger {
-                get {
-                    try {
-                        return ((bool)(this[this.tabletblChannels.TriggerColumn]));
                     }
-                    catch (global::System.InvalidCastException e) {
+                }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Trigger
+                {
+                get
+                    {
+                    try
+                        {
+                        return ((bool) (this[this.tabletblChannels.TriggerColumn]));
+                        }
+                    catch (global::System.InvalidCastException e)
+                        {
                         throw new global::System.Data.StrongTypingException("The value for column \'Trigger\' in table \'tblChannels\' is DBNull.", e);
+                        }
                     }
-                }
-                set {
+                set
+                    {
                     this[this.tabletblChannels.TriggerColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool Mask {
-                get {
-                    try {
-                        return ((bool)(this[this.tabletblChannels.MaskColumn]));
                     }
-                    catch (global::System.InvalidCastException e) {
+                }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Mask
+                {
+                get
+                    {
+                    try
+                        {
+                        return ((bool) (this[this.tabletblChannels.MaskColumn]));
+                        }
+                    catch (global::System.InvalidCastException e)
+                        {
                         throw new global::System.Data.StrongTypingException("The value for column \'Mask\' in table \'tblChannels\' is DBNull.", e);
+                        }
                     }
-                }
-                set {
+                set
+                    {
                     this[this.tabletblChannels.MaskColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool Arm {
-                get {
-                    try {
-                        return ((bool)(this[this.tabletblChannels.ArmColumn]));
                     }
-                    catch (global::System.InvalidCastException e) {
+                }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Arm
+                {
+                get
+                    {
+                    try
+                        {
+                        return ((bool) (this[this.tabletblChannels.ArmColumn]));
+                        }
+                    catch (global::System.InvalidCastException e)
+                        {
                         throw new global::System.Data.StrongTypingException("The value for column \'Arm\' in table \'tblChannels\' is DBNull.", e);
+                        }
                     }
-                }
-                set {
+                set
+                    {
                     this[this.tabletblChannels.ArmColumn] = value;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsLabelNull() {
+            public bool IsLabelNull ()
+                {
                 return this.IsNull(this.tabletblChannels.LabelColumn);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetLabelNull() {
+            public void SetLabelNull ()
+                {
                 this[this.tabletblChannels.LabelColumn] = global::System.Convert.DBNull;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsVisibleNull() {
+            public bool IsVisibleNull ()
+                {
                 return this.IsNull(this.tabletblChannels.VisibleColumn);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetVisibleNull() {
+            public void SetVisibleNull ()
+                {
                 this[this.tabletblChannels.VisibleColumn] = global::System.Convert.DBNull;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsTriggerNull() {
+            public bool IsTriggerNull ()
+                {
                 return this.IsNull(this.tabletblChannels.TriggerColumn);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetTriggerNull() {
+            public void SetTriggerNull ()
+                {
                 this[this.tabletblChannels.TriggerColumn] = global::System.Convert.DBNull;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsMaskNull() {
+            public bool IsMaskNull ()
+                {
                 return this.IsNull(this.tabletblChannels.MaskColumn);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetMaskNull() {
+            public void SetMaskNull ()
+                {
                 this[this.tabletblChannels.MaskColumn] = global::System.Convert.DBNull;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsArmNull() {
+            public bool IsArmNull ()
+                {
                 return this.IsNull(this.tabletblChannels.ArmColumn);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetArmNull() {
+            public void SetArmNull ()
+                {
                 this[this.tabletblChannels.ArmColumn] = global::System.Convert.DBNull;
+                }
             }
-        }
-        
+
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public partial class ProtocolRow : global::System.Data.DataRow {
-            
+        public partial class ProtocolRow :global::System.Data.DataRow
+            {
+
             private ProtocolDataTable tableProtocol;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal ProtocolRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableProtocol = ((ProtocolDataTable)(this.Table));
-            }
-            
+            internal ProtocolRow ( global::System.Data.DataRowBuilder rb ) :
+                    base(rb)
+                {
+                this.tableProtocol = ((ProtocolDataTable) (this.Table));
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string Name {
-                get {
-                    try {
-                        return ((string)(this[this.tableProtocol.NameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
+            public string Name
+                {
+                get
+                    {
+                    try
+                        {
+                        return ((string) (this[this.tableProtocol.NameColumn]));
+                        }
+                    catch (global::System.InvalidCastException e)
+                        {
                         throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'Protocol\' is DBNull.", e);
+                        }
                     }
-                }
-                set {
+                set
+                    {
                     this[this.tableProtocol.NameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string CommandString {
-                get {
-                    try {
-                        return ((string)(this[this.tableProtocol.CommandStringColumn]));
                     }
-                    catch (global::System.InvalidCastException e) {
+                }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string CommandString
+                {
+                get
+                    {
+                    try
+                        {
+                        return ((string) (this[this.tableProtocol.CommandStringColumn]));
+                        }
+                    catch (global::System.InvalidCastException e)
+                        {
                         throw new global::System.Data.StrongTypingException("The value for column \'CommandString\' in table \'Protocol\' is DBNull.", e);
+                        }
                     }
-                }
-                set {
+                set
+                    {
                     this[this.tableProtocol.CommandStringColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public decimal DefaultTicksPerMicroSec {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableProtocol.DefaultTicksPerMicroSecColumn]));
                     }
-                    catch (global::System.InvalidCastException e) {
+                }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal DefaultTicksPerMicroSec
+                {
+                get
+                    {
+                    try
+                        {
+                        return ((decimal) (this[this.tableProtocol.DefaultTicksPerMicroSecColumn]));
+                        }
+                    catch (global::System.InvalidCastException e)
+                        {
                         throw new global::System.Data.StrongTypingException("The value for column \'DefaultTicksPerMicroSec\' in table \'Protocol\' is DBNull.", e);
+                        }
                     }
-                }
-                set {
+                set
+                    {
                     this[this.tableProtocol.DefaultTicksPerMicroSecColumn] = value;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsNameNull() {
+            public bool IsNameNull ()
+                {
                 return this.IsNull(this.tableProtocol.NameColumn);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetNameNull() {
+            public void SetNameNull ()
+                {
                 this[this.tableProtocol.NameColumn] = global::System.Convert.DBNull;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsCommandStringNull() {
+            public bool IsCommandStringNull ()
+                {
                 return this.IsNull(this.tableProtocol.CommandStringColumn);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetCommandStringNull() {
+            public void SetCommandStringNull ()
+                {
                 this[this.tableProtocol.CommandStringColumn] = global::System.Convert.DBNull;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsDefaultTicksPerMicroSecNull() {
+            public bool IsDefaultTicksPerMicroSecNull ()
+                {
                 return this.IsNull(this.tableProtocol.DefaultTicksPerMicroSecColumn);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetDefaultTicksPerMicroSecNull() {
+            public void SetDefaultTicksPerMicroSecNull ()
+                {
                 this[this.tableProtocol.DefaultTicksPerMicroSecColumn] = global::System.Convert.DBNull;
+                }
             }
-        }
-        
+
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public partial class SampleRatesRow : global::System.Data.DataRow {
-            
+        public partial class SampleRatesRow :global::System.Data.DataRow
+            {
+
             private SampleRatesDataTable tableSampleRates;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal SampleRatesRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableSampleRates = ((SampleRatesDataTable)(this.Table));
-            }
-            
+            internal SampleRatesRow ( global::System.Data.DataRowBuilder rb ) :
+                    base(rb)
+                {
+                this.tableSampleRates = ((SampleRatesDataTable) (this.Table));
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string Name {
-                get {
-                    try {
-                        return ((string)(this[this.tableSampleRates.NameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
+            public string Name
+                {
+                get
+                    {
+                    try
+                        {
+                        return ((string) (this[this.tableSampleRates.NameColumn]));
+                        }
+                    catch (global::System.InvalidCastException e)
+                        {
                         throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'SampleRates\' is DBNull.", e);
+                        }
                     }
-                }
-                set {
+                set
+                    {
                     this[this.tableSampleRates.NameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string Value {
-                get {
-                    try {
-                        return ((string)(this[this.tableSampleRates.ValueColumn]));
                     }
-                    catch (global::System.InvalidCastException e) {
+                }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string Value
+                {
+                get
+                    {
+                    try
+                        {
+                        return ((string) (this[this.tableSampleRates.ValueColumn]));
+                        }
+                    catch (global::System.InvalidCastException e)
+                        {
                         throw new global::System.Data.StrongTypingException("The value for column \'Value\' in table \'SampleRates\' is DBNull.", e);
+                        }
                     }
-                }
-                set {
+                set
+                    {
                     this[this.tableSampleRates.ValueColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public decimal TicksPerMicroSec {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableSampleRates.TicksPerMicroSecColumn]));
                     }
-                    catch (global::System.InvalidCastException e) {
+                }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal TicksPerMicroSec
+                {
+                get
+                    {
+                    try
+                        {
+                        return ((decimal) (this[this.tableSampleRates.TicksPerMicroSecColumn]));
+                        }
+                    catch (global::System.InvalidCastException e)
+                        {
                         throw new global::System.Data.StrongTypingException("The value for column \'TicksPerMicroSec\' in table \'SampleRates\' is DBNull.", e);
+                        }
+                    }
+                set
+                    {
+                    this[this.tableSampleRates.TicksPerMicroSecColumn] = value;
                     }
                 }
-                set {
-                    this[this.tableSampleRates.TicksPerMicroSecColumn] = value;
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsNameNull ()
+                {
+                return this.IsNull(this.tableSampleRates.NameColumn);
+                }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetNameNull ()
+                {
+                this[this.tableSampleRates.NameColumn] = global::System.Convert.DBNull;
+                }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsValueNull ()
+                {
+                return this.IsNull(this.tableSampleRates.ValueColumn);
+                }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetValueNull ()
+                {
+                this[this.tableSampleRates.ValueColumn] = global::System.Convert.DBNull;
+                }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTicksPerMicroSecNull ()
+                {
+                return this.IsNull(this.tableSampleRates.TicksPerMicroSecColumn);
+                }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTicksPerMicroSecNull ()
+                {
+                this[this.tableSampleRates.TicksPerMicroSecColumn] = global::System.Convert.DBNull;
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsNameNull() {
-                return this.IsNull(this.tableSampleRates.NameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetNameNull() {
-                this[this.tableSampleRates.NameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsValueNull() {
-                return this.IsNull(this.tableSampleRates.ValueColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetValueNull() {
-                this[this.tableSampleRates.ValueColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsTicksPerMicroSecNull() {
-                return this.IsNull(this.tableSampleRates.TicksPerMicroSecColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetTicksPerMicroSecNull() {
-                this[this.tableSampleRates.TicksPerMicroSecColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
+
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public partial class CurrentSettingsRow : global::System.Data.DataRow {
-            
+        public partial class CurrentSettingsRow :global::System.Data.DataRow
+            {
+
             private CurrentSettingsDataTable tableCurrentSettings;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal CurrentSettingsRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableCurrentSettings = ((CurrentSettingsDataTable)(this.Table));
-            }
-            
+            internal CurrentSettingsRow ( global::System.Data.DataRowBuilder rb ) :
+                    base(rb)
+                {
+                this.tableCurrentSettings = ((CurrentSettingsDataTable) (this.Table));
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string ComPort {
-                get {
-                    try {
-                        return ((string)(this[this.tableCurrentSettings.ComPortColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
+            public string ComPort
+                {
+                get
+                    {
+                    try
+                        {
+                        return ((string) (this[this.tableCurrentSettings.ComPortColumn]));
+                        }
+                    catch (global::System.InvalidCastException e)
+                        {
                         throw new global::System.Data.StrongTypingException("The value for column \'ComPort\' in table \'CurrentSettings\' is DBNull.", e);
+                        }
                     }
-                }
-                set {
+                set
+                    {
                     this[this.tableCurrentSettings.ComPortColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int Baud {
-                get {
-                    try {
-                        return ((int)(this[this.tableCurrentSettings.BaudColumn]));
                     }
-                    catch (global::System.InvalidCastException e) {
+                }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Baud
+                {
+                get
+                    {
+                    try
+                        {
+                        return ((int) (this[this.tableCurrentSettings.BaudColumn]));
+                        }
+                    catch (global::System.InvalidCastException e)
+                        {
                         throw new global::System.Data.StrongTypingException("The value for column \'Baud\' in table \'CurrentSettings\' is DBNull.", e);
+                        }
                     }
-                }
-                set {
+                set
+                    {
                     this[this.tableCurrentSettings.BaudColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string Protocol {
-                get {
-                    try {
-                        return ((string)(this[this.tableCurrentSettings.ProtocolColumn]));
                     }
-                    catch (global::System.InvalidCastException e) {
+                }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string Protocol
+                {
+                get
+                    {
+                    try
+                        {
+                        return ((string) (this[this.tableCurrentSettings.ProtocolColumn]));
+                        }
+                    catch (global::System.InvalidCastException e)
+                        {
                         throw new global::System.Data.StrongTypingException("The value for column \'Protocol\' in table \'CurrentSettings\' is DBNull.", e);
+                        }
+                    }
+                set
+                    {
+                    this[this.tableCurrentSettings.ProtocolColumn] = value;
                     }
                 }
-                set {
-                    this[this.tableCurrentSettings.ProtocolColumn] = value;
-                }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsComPortNull() {
+            public bool IsComPortNull ()
+                {
                 return this.IsNull(this.tableCurrentSettings.ComPortColumn);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetComPortNull() {
+            public void SetComPortNull ()
+                {
                 this[this.tableCurrentSettings.ComPortColumn] = global::System.Convert.DBNull;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsBaudNull() {
+            public bool IsBaudNull ()
+                {
                 return this.IsNull(this.tableCurrentSettings.BaudColumn);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetBaudNull() {
+            public void SetBaudNull ()
+                {
                 this[this.tableCurrentSettings.BaudColumn] = global::System.Convert.DBNull;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsProtocolNull() {
+            public bool IsProtocolNull ()
+                {
                 return this.IsNull(this.tableCurrentSettings.ProtocolColumn);
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetProtocolNull() {
+            public void SetProtocolNull ()
+                {
                 this[this.tableCurrentSettings.ProtocolColumn] = global::System.Convert.DBNull;
+                }
             }
-        }
-        
+
         /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public class tblChannelsRowChangeEvent : global::System.EventArgs {
-            
+        public class tblChannelsRowChangeEvent :global::System.EventArgs
+            {
+
             private tblChannelsRow eventRow;
-            
+
             private global::System.Data.DataRowAction eventAction;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public tblChannelsRowChangeEvent(tblChannelsRow row, global::System.Data.DataRowAction action) {
+            public tblChannelsRowChangeEvent ( tblChannelsRow row, global::System.Data.DataRowAction action )
+                {
                 this.eventRow = row;
                 this.eventAction = action;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public tblChannelsRow Row {
-                get {
+            public tblChannelsRow Row
+                {
+                get
+                    {
                     return this.eventRow;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataRowAction Action {
-                get {
+            public global::System.Data.DataRowAction Action
+                {
+                get
+                    {
                     return this.eventAction;
+                    }
                 }
             }
-        }
-        
+
         /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public class ProtocolRowChangeEvent : global::System.EventArgs {
-            
+        public class ProtocolRowChangeEvent :global::System.EventArgs
+            {
+
             private ProtocolRow eventRow;
-            
+
             private global::System.Data.DataRowAction eventAction;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public ProtocolRowChangeEvent(ProtocolRow row, global::System.Data.DataRowAction action) {
+            public ProtocolRowChangeEvent ( ProtocolRow row, global::System.Data.DataRowAction action )
+                {
                 this.eventRow = row;
                 this.eventAction = action;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public ProtocolRow Row {
-                get {
+            public ProtocolRow Row
+                {
+                get
+                    {
                     return this.eventRow;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataRowAction Action {
-                get {
+            public global::System.Data.DataRowAction Action
+                {
+                get
+                    {
                     return this.eventAction;
+                    }
                 }
             }
-        }
-        
+
         /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public class SampleRatesRowChangeEvent : global::System.EventArgs {
-            
+        public class SampleRatesRowChangeEvent :global::System.EventArgs
+            {
+
             private SampleRatesRow eventRow;
-            
+
             private global::System.Data.DataRowAction eventAction;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public SampleRatesRowChangeEvent(SampleRatesRow row, global::System.Data.DataRowAction action) {
+            public SampleRatesRowChangeEvent ( SampleRatesRow row, global::System.Data.DataRowAction action )
+                {
                 this.eventRow = row;
                 this.eventAction = action;
-            }
-            
+                }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public SampleRatesRow Row {
-                get {
+            public SampleRatesRow Row
+                {
+                get
+                    {
                     return this.eventRow;
+                    }
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataRowAction Action {
-                get {
+            public global::System.Data.DataRowAction Action
+                {
+                get
+                    {
                     return this.eventAction;
+                    }
                 }
             }
-        }
-        
+
         /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public class CurrentSettingsRowChangeEvent : global::System.EventArgs {
-            
+        public class CurrentSettingsRowChangeEvent :global::System.EventArgs
+            {
+
             private CurrentSettingsRow eventRow;
-            
+
             private global::System.Data.DataRowAction eventAction;
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CurrentSettingsRowChangeEvent(CurrentSettingsRow row, global::System.Data.DataRowAction action) {
+            public CurrentSettingsRowChangeEvent ( CurrentSettingsRow row, global::System.Data.DataRowAction action )
+                {
                 this.eventRow = row;
                 this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CurrentSettingsRow Row {
-                get {
-                    return this.eventRow;
                 }
-            }
-            
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataRowAction Action {
-                get {
+            public CurrentSettingsRow Row
+                {
+                get
+                    {
+                    return this.eventRow;
+                    }
+                }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action
+                {
+                get
+                    {
                     return this.eventAction;
+                    }
                 }
             }
         }
     }
-}
 
 #pragma warning restore 1591

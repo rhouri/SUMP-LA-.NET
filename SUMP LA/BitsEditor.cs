@@ -10,63 +10,63 @@ using System.Windows.Forms;
 using System.IO;
 
 namespace SUMPLA_net
-   {
-   public partial class BitsEditor :UserControl
-      {
-      public int Value
-         {
-         get
+    {
+    public partial class BitsEditor :UserControl
+        {
+        public int Value
             {
-            return bitsBox1.Value;
+            get
+                {
+                return bitsBox1.Value;
+                }
+            set
+                {
+                bitsBox1.Value = value;
+                DispHex();
+                }
             }
-         set
+
+        public int LSBFirstValue
             {
-            bitsBox1.Value = value;
+            get
+                {
+                return bitsBox1.LSBFirstValue;
+                }
+            }
+        private List<Label> HexLabels = new List<Label>();
+
+
+        [DefaultValue(32)]
+        public int BitsNum
+            {
+            get;
+            set;
+            }
+
+
+        public BitsEditor ()
+            {
+            InitializeComponent();
+            }
+
+        private void bitsBox1_ValueChanged ( object sender, BitboxValueChangedEventArgs e )
+            {
             DispHex();
-            }   
-         }
-
-      public int LSBFirstValue
-         {
-         get
-            {
-            return bitsBox1.LSBFirstValue;
             }
-         }
-      private List<Label>  HexLabels = new List<Label>();
+        private void DispHex ()
+            {
+            int x = (int) bitsBox1.Value;
+            foreach (Control lx in this.Controls)
+                if (lx is Label)
+                    if (lx.Name.StartsWith("hex"))
+                        lx.Text = string.Format("{0:X}", (x >> (int) lx.Tag) & 0xf);
+
+            // test.Text = string.Format("{0:X}", e.Value);
+            }
 
 
-      [DefaultValue(32)]
-      public int BitsNum
-         {
-         get;
-         set;
-         }
-      
-      
-      public BitsEditor ()
-         {
-         InitializeComponent();
-         }
-
-      private void bitsBox1_ValueChanged ( object sender, BitboxValueChangedEventArgs e )
-         {
-         DispHex();
-         }
-      private void DispHex()
-         {
-         int x = (int) bitsBox1.Value;
-         foreach (Control lx in this.Controls)
-            if (lx is Label)
-               if (lx.Name.StartsWith("hex"))
-                  lx.Text = string.Format("{0:X}", (x >> (int) lx.Tag) & 0xf);
-
-        // test.Text = string.Format("{0:X}", e.Value);
-         }
-         
-         
-    
 
 
-      }
-   }
+
+        }
+    }

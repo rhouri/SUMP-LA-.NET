@@ -8,164 +8,164 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace SUMPLA_net
-   {
-   public partial class Trigger :UserControl
-      {
-      private int sn = 0;
+    {
+    public partial class Trigger :UserControl
+        {
+        private int sn = 0;
 
-      // gets byte array from int value ( MSB First)
-      public static List<byte> GetBytes ( int v, int Count )
-         {
-         List<byte> bb = new List<byte>();
-
-
-         for (int i = Count-1 ; i >= 0 ; i--)
+        // gets byte array from int value ( MSB First)
+        public static List<byte> GetBytes ( int v, int Count )
             {
-            bb.Add((byte) ((v >> (i * 8)) & 0xff));
-            }
-         return bb;
-         }
-
-      public static List<byte> LSBFirstGetBytes ( int v, int Count )
-         {
-         List<byte> bb = new List<byte>();
+            List<byte> bb = new List<byte>();
 
 
-         for (int i = 0 ;i<Count  ; i++)
-            {
-            bb.Add((byte) ((v >> (i * 8)) & 0xff));
-            }
-         return bb;
-         }
-      
-
-      public Color HeaderFG
-         {
-         get
-            {
-            return panel1.ForeColor;
+            for (int i = Count - 1 ; i >= 0 ; i--)
+                {
+                bb.Add((byte) ((v >> (i * 8)) & 0xff));
+                }
+            return bb;
             }
 
-         set
+        public static List<byte> LSBFirstGetBytes ( int v, int Count )
             {
-            panel1.ForeColor = value;
-            }
-         }
+            List<byte> bb = new List<byte>();
 
-      public Color HeaderBG
-         {
-         get
+
+            for (int i = 0 ; i < Count ; i++)
+                {
+                bb.Add((byte) ((v >> (i * 8)) & 0xff));
+                }
+            return bb;
+            }
+
+
+        public Color HeaderFG
             {
-            return panel1.BackColor;
+            get
+                {
+                return panel1.ForeColor;
+                }
+
+            set
+                {
+                panel1.ForeColor = value;
+                }
             }
 
-         set
+        public Color HeaderBG
             {
-            panel1.BackColor = value;
+            get
+                {
+                return panel1.BackColor;
+                }
+
+            set
+                {
+                panel1.BackColor = value;
+                }
             }
-         }
 
 
-      public int StageNum
-         {
-         get
+        public int StageNum
             {
-            return sn;
+            get
+                {
+                return sn;
+                }
+            set
+                {
+                sn = value;
+                panel1.Caption = string.Format("Stage {0}", sn);
+                }
             }
-         set
+
+
+
+
+        public List<byte> MaskBytes
             {
-            sn = value;
-            panel1.Caption = string.Format("Stage {0}", sn);
+            get
+                {
+                return GetBytes(Mask.LSBFirstValue, 4);
+                }
             }
-         }
 
 
-
-
-      public List<byte> MaskBytes
-         {
-         get
+        public List<byte> ValueBytes
             {
-            return GetBytes(Mask.LSBFirstValue,4);
+            get
+                {
+                return GetBytes(Value.LSBFirstValue, 4);
+                }
             }
-         }
 
 
-      public List<byte> ValueBytes
-         {
-         get
+        public List<byte> DelayBytes
             {
-            return GetBytes(Value.LSBFirstValue,4);
+            get
+                {
+                return GetBytes((int) Delay.Value, 2);
+                }
+
             }
-         }
 
 
-      public List<byte> DelayBytes
-         {
-         get
+        public byte Level
             {
-            return GetBytes((int) Delay.Value, 2);
-            }
-         
-         }
+            get
+                {
+                if (Level1.Checked)
+                    return (byte) 1;
 
-      
-      public byte Level
-         {
-         get
+                if (Level2.Checked)
+                    return (byte) 2;
+                if (Level3.Checked)
+                    return (byte) 3;
+                return (byte) 0;
+                }
+            set
+                {
+                switch (value)
+                    {
+                    case 1:
+                        Level1.Checked = true;
+                        break;
+                    case 2:
+                        Level2.Checked = true;
+                        break;
+                    case 3:
+                        Level3.Checked = true;
+                        break;
+                    default:
+                        lvlImmediate.Checked = true;
+                        break;
+                    }
+
+
+
+                }
+
+            }
+        public Trigger ()
             {
-            if (Level1.Checked)
-               return (byte) 1;
-
-            if (Level2.Checked)
-               return (byte) 2;
-            if (Level3.Checked)
-               return (byte) 3;
-            return (byte) 0;
+            InitializeComponent();
             }
-         set
+
+        private void rbParallel_Click ( object sender, EventArgs e )
             {
-            switch (value)
-               {
-               case 1:
-                  Level1.Checked = true;
-                  break;
-               case 2:
-                  Level2.Checked = true;
-                  break;
-               case 3:
-                  Level3.Checked = true;
-                  break;
-               default:
-                  lvlImmediate.Checked = true;
-                  break;
-               }
-            
-            
-            
+            SerialChannel.Visible = lblSerialChannel.Visible = rbSerial.Checked;
             }
-         
-         }   
-      public Trigger ()
-         {
-         InitializeComponent();
-         }
 
-      private void rbParallel_Click ( object sender, EventArgs e )
-         {
-         SerialChannel.Visible = lblSerialChannel.Visible = rbSerial.Checked;
-         }
+        private void roundButton3_Click ( object sender, EventArgs e )
+            {
 
-      private void roundButton3_Click ( object sender, EventArgs e )
-         {
+            }
 
-         }
+        private void roundButton4_Click ( object sender, EventArgs e )
+            {
 
-      private void roundButton4_Click ( object sender, EventArgs e )
-         {
-
-         }
+            }
 
 
-      }
-   }
+        }
+    }
