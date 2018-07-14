@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSSettings" targetNamespace="http://tempuri.org/DSSettings.xsd" xmlns:mstns="http://tempuri.org/DSSettings.xsd" xmlns="http://tempuri.org/DSSettings.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSSettings" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSSettings" msprop:Generator_DataSetName="DSSettings" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblChannels" msprop:Generator_UserTableName="tblChannels" msprop:Generator_RowDeletedName="tblChannelsRowDeleted" msprop:Generator_RowChangedName="tblChannelsRowChanged" msprop:Generator_RowClassName="tblChannelsRow" msprop:Generator_RowChangingName="tblChannelsRowChanging" msprop:Generator_RowEvArgName="tblChannelsRowChangeEvent" msprop:Generator_RowEvHandlerName="tblChannelsRowChangeEventHandler" msprop:Generator_TableClassName="tblChannelsDataTable" msprop:Generator_TableVarName="tabletblChannels" msprop:Generator_RowDeletingName="tblChannelsRowDeleting" msprop:Generator_TablePropName="tblChannels">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Label" msprop:Generator_UserColumnName="Label" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Label" msprop:Generator_ColumnPropNameInTable="LabelColumn" msprop:Generator_ColumnVarNameInTable="columnLabel" type="xs:string" default="&quot;&quot;" minOccurs="0" />
+              <xs:element name="Visible" msprop:Generator_UserColumnName="Visible" msprop:Generator_ColumnVarNameInTable="columnVisible" msprop:Generator_ColumnPropNameInRow="Visible" msprop:Generator_ColumnPropNameInTable="VisibleColumn" type="xs:boolean" default="false" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SampleRates" msprop:Generator_UserTableName="SampleRates" msprop:Generator_RowDeletedName="SampleRatesRowDeleted" msprop:Generator_RowChangedName="SampleRatesRowChanged" msprop:Generator_RowClassName="SampleRatesRow" msprop:Generator_RowChangingName="SampleRatesRowChanging" msprop:Generator_RowEvArgName="SampleRatesRowChangeEvent" msprop:Generator_RowEvHandlerName="SampleRatesRowChangeEventHandler" msprop:Generator_TableClassName="SampleRatesDataTable" msprop:Generator_TableVarName="tableSampleRates" msprop:Generator_RowDeletingName="SampleRatesRowDeleting" msprop:Generator_TablePropName="SampleRates">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnVarNameInTable="columnName" type="xs:string" minOccurs="0" />
+              <xs:element name="Frequency" msprop:Generator_UserColumnName="Frequency" msprop:Generator_ColumnVarNameInTable="columnFrequency" msprop:Generator_ColumnPropNameInRow="Frequency" msprop:Generator_ColumnPropNameInTable="FrequencyColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CurrentSettings" msprop:Generator_UserTableName="CurrentSettings" msprop:Generator_RowDeletedName="CurrentSettingsRowDeleted" msprop:Generator_RowChangedName="CurrentSettingsRowChanged" msprop:Generator_RowClassName="CurrentSettingsRow" msprop:Generator_RowChangingName="CurrentSettingsRowChanging" msprop:Generator_RowEvArgName="CurrentSettingsRowChangeEvent" msprop:Generator_RowEvHandlerName="CurrentSettingsRowChangeEventHandler" msprop:Generator_TableClassName="CurrentSettingsDataTable" msprop:Generator_TableVarName="tableCurrentSettings" msprop:Generator_RowDeletingName="CurrentSettingsRowDeleting" msprop:Generator_TablePropName="CurrentSettings">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ComPort" msprop:Generator_UserColumnName="ComPort" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnComPort" msprop:Generator_ColumnPropNameInTable="ComPortColumn" msprop:Generator_ColumnPropNameInRow="ComPort" type="xs:string" minOccurs="0" />
+              <xs:element name="Baud" msprop:Generator_UserColumnName="Baud" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Baud" msprop:Generator_ColumnPropNameInTable="BaudColumn" msprop:Generator_ColumnVarNameInTable="columnBaud" type="xs:string" minOccurs="0" />
+              <xs:element name="SamplingClock" msdata:Caption="Sampling Clock" msprop:Generator_UserColumnName="SamplingClock" msprop:Generator_ColumnVarNameInTable="columnSamplingClock" msprop:Generator_ColumnPropNameInRow="SamplingClock" msprop:Generator_ColumnPropNameInTable="SamplingClockColumn" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="ChannelGroup_0" msprop:Generator_UserColumnName="ChannelGroup_0" msprop:Generator_ColumnVarNameInTable="columnChannelGroup_0" msprop:Generator_ColumnPropNameInRow="ChannelGroup_0" msprop:Generator_ColumnPropNameInTable="ChannelGroup_0Column" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="ChannelGroup_1" msprop:Generator_UserColumnName="ChannelGroup_1" msprop:Generator_ColumnVarNameInTable="columnChannelGroup_1" msprop:Generator_ColumnPropNameInRow="ChannelGroup_1" msprop:Generator_ColumnPropNameInTable="ChannelGroup_1Column" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="ChannelGroup_2" msprop:Generator_UserColumnName="ChannelGroup_2" msprop:Generator_ColumnVarNameInTable="columnChannelGroup_2" msprop:Generator_ColumnPropNameInRow="ChannelGroup_2" msprop:Generator_ColumnPropNameInTable="ChannelGroup_2Column" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="ChannelGroup_3" msprop:Generator_UserColumnName="ChannelGroup_3" msprop:Generator_ColumnVarNameInTable="columnChannelGroup_3" msprop:Generator_ColumnPropNameInRow="ChannelGroup_3" msprop:Generator_ColumnPropNameInTable="ChannelGroup_3Column" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="NoiseFilter" msprop:Generator_UserColumnName="NoiseFilter" msprop:Generator_ColumnVarNameInTable="columnNoiseFilter" msprop:Generator_ColumnPropNameInRow="NoiseFilter" msprop:Generator_ColumnPropNameInTable="NoiseFilterColumn" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="RLE" msprop:Generator_UserColumnName="RLE" msprop:Generator_ColumnVarNameInTable="columnRLE" msprop:Generator_ColumnPropNameInRow="RLE" msprop:Generator_ColumnPropNameInTable="RLEColumn" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="CaptureRate" msprop:Generator_UserColumnName="CaptureRate" msprop:nullValue="_throw" msprop:Generator_ColumnVarNameInTable="columnCaptureRate" msprop:Generator_ColumnPropNameInTable="CaptureRateColumn" msprop:Generator_ColumnPropNameInRow="CaptureRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BufferSize" msprop:Generator_UserColumnName="BufferSize" msprop:nullValue="_throw" msprop:Generator_ColumnPropNameInRow="BufferSize" msprop:Generator_ColumnPropNameInTable="BufferSizeColumn" msprop:Generator_ColumnVarNameInTable="columnBufferSize" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ReadTOut" msprop:Generator_UserColumnName="ReadTOut" msprop:Generator_ColumnPropNameInRow="ReadTOut" msprop:Generator_ColumnVarNameInTable="columnReadTOut" msprop:Generator_ColumnPropNameInTable="ReadTOutColumn" type="xs:int" default="1000" minOccurs="0" />
+              <xs:element name="WriteTOut" msprop:Generator_UserColumnName="WriteTOut" msprop:Generator_ColumnPropNameInRow="WriteTOut" msprop:Generator_ColumnVarNameInTable="columnWriteTOut" msprop:Generator_ColumnPropNameInTable="WriteTOutColumn" type="xs:int" default="1000" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TriggerSettings" msprop:Generator_UserTableName="TriggerSettings" msprop:Generator_RowDeletedName="TriggerSettingsRowDeleted" msprop:Generator_RowChangedName="TriggerSettingsRowChanged" msprop:Generator_RowClassName="TriggerSettingsRow" msprop:Generator_RowChangingName="TriggerSettingsRowChanging" msprop:Generator_RowEvArgName="TriggerSettingsRowChangeEvent" msprop:Generator_RowEvHandlerName="TriggerSettingsRowChangeEventHandler" msprop:Generator_TableClassName="TriggerSettingsDataTable" msprop:Generator_TableVarName="tableTriggerSettings" msprop:Generator_RowDeletingName="TriggerSettingsRowDeleting" msprop:Generator_TablePropName="TriggerSettings">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StageNum" msprop:Generator_UserColumnName="StageNum" msprop:Generator_ColumnVarNameInTable="columnStageNum" msprop:Generator_ColumnPropNameInRow="StageNum" msprop:Generator_ColumnPropNameInTable="StageNumColumn" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="Arm" msprop:Generator_UserColumnName="Arm" msprop:Generator_ColumnVarNameInTable="columnArm" msprop:Generator_ColumnPropNameInRow="Arm" msprop:Generator_ColumnPropNameInTable="ArmColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SerialMode" msprop:Generator_UserColumnName="SerialMode" msprop:Generator_ColumnVarNameInTable="columnSerialMode" msprop:Generator_ColumnPropNameInRow="SerialMode" msprop:Generator_ColumnPropNameInTable="SerialModeColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SerialChannel" msprop:Generator_UserColumnName="SerialChannel" msprop:Generator_ColumnVarNameInTable="columnSerialChannel" msprop:Generator_ColumnPropNameInRow="SerialChannel" msprop:Generator_ColumnPropNameInTable="SerialChannelColumn" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="Mask" msprop:Generator_UserColumnName="Mask" msprop:Generator_ColumnVarNameInTable="columnMask" msprop:Generator_ColumnPropNameInRow="Mask" msprop:Generator_ColumnPropNameInTable="MaskColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_UserColumnName="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="StartAction" msprop:Generator_UserColumnName="StartAction" msprop:Generator_ColumnVarNameInTable="columnStartAction" msprop:Generator_ColumnPropNameInRow="StartAction" msprop:Generator_ColumnPropNameInTable="StartActionColumn" type="xs:boolean" default="true" minOccurs="0" />
+              <xs:element name="Delay" msprop:Generator_UserColumnName="Delay" msprop:Generator_ColumnVarNameInTable="columnDelay" msprop:Generator_ColumnPropNameInRow="Delay" msprop:Generator_ColumnPropNameInTable="DelayColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BufferSizes" msprop:Generator_UserTableName="BufferSizes" msprop:Generator_RowDeletedName="BufferSizesRowDeleted" msprop:Generator_TableClassName="BufferSizesDataTable" msprop:Generator_RowChangedName="BufferSizesRowChanged" msprop:Generator_RowClassName="BufferSizesRow" msprop:Generator_RowChangingName="BufferSizesRowChanging" msprop:Generator_RowEvArgName="BufferSizesRowChangeEvent" msprop:Generator_RowEvHandlerName="BufferSizesRowChangeEventHandler" msprop:Generator_TablePropName="BufferSizes" msprop:Generator_TableVarName="tableBufferSizes" msprop:Generator_RowDeletingName="BufferSizesRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnPropNameInRow="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Size" msdata:Caption="Frequency" msprop:Generator_UserColumnName="Size" msprop:Generator_ColumnPropNameInRow="Size" msprop:Generator_ColumnVarNameInTable="columnSize" msprop:Generator_ColumnPropNameInTable="SizeColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Colors" msprop:Generator_UserTableName="Colors" msprop:Generator_RowDeletedName="ColorsRowDeleted" msprop:Generator_TableClassName="ColorsDataTable" msprop:Generator_RowChangedName="ColorsRowChanged" msprop:Generator_RowClassName="ColorsRow" msprop:Generator_RowChangingName="ColorsRowChanging" msprop:Generator_RowEvArgName="ColorsRowChangeEvent" msprop:Generator_RowEvHandlerName="ColorsRowChangeEventHandler" msprop:Generator_TablePropName="Colors" msprop:Generator_TableVarName="tableColors" msprop:Generator_RowDeletingName="ColorsRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EvenTraceColor" msprop:Generator_UserColumnName="EvenTraceColor" msprop:Generator_ColumnPropNameInRow="EvenTraceColor" msprop:Generator_ColumnVarNameInTable="columnEvenTraceColor" msprop:Generator_ColumnPropNameInTable="EvenTraceColorColumn" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="EvenTraceBackColor" msprop:Generator_UserColumnName="EvenTraceBackColor" msprop:Generator_ColumnPropNameInRow="EvenTraceBackColor" msprop:Generator_ColumnVarNameInTable="columnEvenTraceBackColor" msprop:Generator_ColumnPropNameInTable="EvenTraceBackColorColumn" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="OddTraceColor" msprop:Generator_UserColumnName="OddTraceColor" msprop:Generator_ColumnPropNameInRow="OddTraceColor" msprop:Generator_ColumnVarNameInTable="columnOddTraceColor" msprop:Generator_ColumnPropNameInTable="OddTraceColorColumn" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="OddTraceBackColor" msprop:Generator_UserColumnName="OddTraceBackColor" msprop:Generator_ColumnPropNameInRow="OddTraceBackColor" msprop:Generator_ColumnVarNameInTable="columnOddTraceBackColor" msprop:Generator_ColumnPropNameInTable="OddTraceBackColorColumn" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="ChannelLabelBG" msprop:Generator_UserColumnName="ChannelLabelBG" msprop:Generator_ColumnPropNameInRow="ChannelLabelBG" msprop:Generator_ColumnVarNameInTable="columnChannelLabelBG" msprop:Generator_ColumnPropNameInTable="ChannelLabelBGColumn" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="ChannelLabelFG" msprop:Generator_UserColumnName="ChannelLabelFG" msprop:Generator_ColumnPropNameInRow="ChannelLabelFG" msprop:Generator_ColumnVarNameInTable="columnChannelLabelFG" msprop:Generator_ColumnPropNameInTable="ChannelLabelFGColumn" type="xs:int" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
