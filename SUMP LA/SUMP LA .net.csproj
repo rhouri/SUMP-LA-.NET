@@ -178,6 +178,7 @@
     <Compile Include="Trigger.Designer.cs">
       <DependentUpon>Trigger.cs</DependentUpon>
     </Compile>
+    <None Include="User Manual\net Client For The SUMP LA Protocol.pdf" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RoundButton\RoundButton.csproj">
@@ -198,7 +199,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="User Manual\net Client For The SUMP LA Protocol.pdf" />
     <None Include="SUMP LA .net_1_TemporaryKey.pfx" />
     <None Include="Untitled.png" />
   </ItemGroup>
